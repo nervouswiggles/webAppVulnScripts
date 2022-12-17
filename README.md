@@ -6,7 +6,6 @@ Here is a repo of the collective vulnerability scripts used for web applications
 ```
 {fileName} = hello
 {fileExtension} = jpg
-{fileExtension} = png
 {domain} = xxx.collaboraror.org
 ```
 

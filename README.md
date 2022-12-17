@@ -23,6 +23,8 @@ Set filename to ; sleep 10; to test some command injection --> https://book.hack
 > /var/www/html/out.txt #Try to redirect the output to a file
 < /etc/passwd #Try to send some input to the command
 ```
-             
+
+### References
 https://book.hacktricks.xyz/pentesting-web/file-upload#from-file-upload-to-other-vulnerabilities
 https://github.com/danielmiessler/SecLists/blob/master/Miscellaneous/web/content-type.txt
+https://book.hacktricks.xyz/pentesting-web/file-upload#file-upload-general-methodology

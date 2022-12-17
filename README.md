@@ -11,9 +11,7 @@ Here is a repo of the collective vulnerability scripts used for web applications
 
 -- Try and include localhost 
 
--- ------------
--- General rule
--- ------------
+### General rule
 Set filename to ../../../tmp/lol.png and try to achieve a path traversal
 Set filename to sleep(10)-- -.jpg and you may be able to achieve a SQL injection
 Set filename to <svg onload=alert(document.domain)> to achieve a XSS

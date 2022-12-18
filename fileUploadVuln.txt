@@ -78,6 +78,11 @@ https://{domain}/{fileName}.
 https://{domain}/{fileName}.png....
 https://{domain}/{fileName}.png....
 https://{domain}/{fileName}.png
+https://{domain}/{fileName}.png.png
+https://{domain}/{fileName}.png.png.png
+https://{domain}/{fileName}.jpg
+https://{domain}/{fileName}.jpg.jpg
+https://{domain}/{fileName}.jpg.jpg.jpg
 https://{domain}/{fileName}.png.pHp5
 https://{domain}/{fileName}.png\x00.png
 https://{domain}/{fileName}.png%0a.png

